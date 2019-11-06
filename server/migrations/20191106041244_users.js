@@ -1,5 +1,5 @@
 
-exports.up = function(knex, Promise) {
+exports.up = function(knex) {
     return knex.schema.createTable('users', users => {
         users.increments('userId');
         users.string('email').notNullable();
