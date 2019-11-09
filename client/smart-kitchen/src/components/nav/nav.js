@@ -3,12 +3,15 @@ import './nav.scss';
 
 function Nav() {
 	return (
-		<div class="nav">
+        <div class="nav-container">
+		<nav class="nav">
 			<a>Home</a>
 			<a>Recipes</a>
 			<a>Contact Us</a>
 			<a>Sign In</a>
-		</div>
+		</nav>
+        <h1>Smart Kitchen Recipes</h1>
+        </div>
 	);
 }
 

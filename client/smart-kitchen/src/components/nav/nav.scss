@@ -1,11 +1,22 @@
 @import '../../assets/styles/variables';
 
 .nav{
-    height: 20vh;
-    background-color: $color4;
     display: flex;
     justify-content: space-around;
-    color: white;
     font-size: 1.8rem;
     padding-top: 10px;
+}
+
+h1{
+    font-size: 3.2rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    background-color: $color4;
+    color: white;
+    height: 20vh;
 }
