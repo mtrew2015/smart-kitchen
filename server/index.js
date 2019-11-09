@@ -6,11 +6,13 @@ const morgan = require('morgan');
 const port = 5000;
 const authRouter = require('./routers/authRouter');
 const recipeRouter = require('./routers/recipeRouter');
+const bodyParser = require('body-parser');
 
 server.use(
     morgan('tiny'), 
     helmet(), 
-    cors()
+    cors(),
+    bodyParser()
 )
 
 server.use('/api/users', authRouter)
