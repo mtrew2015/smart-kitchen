@@ -12,7 +12,8 @@ server.use(
     morgan('tiny'), 
     helmet(), 
     cors(),
-    bodyParser()
+    bodyParser.json(),
+    bodyParser.urlencoded({extended: true})
 )
 
 server.use('/api/users', authRouter)
