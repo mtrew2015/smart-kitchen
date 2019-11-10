@@ -5,6 +5,7 @@ exports.up = function(knex) {
         recipe.integer('author').unsigned().notNullable();
         recipe.text('steps').notNullable();
         recipe.text('category')
+        recipe.text('imageLink')
         recipe.text('comments');
         recipe.float('rating').defaultTo(0)
         recipe.foreign('author').references('id').inTable('users');
