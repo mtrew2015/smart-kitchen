@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './newRecipe.scss'
+import axios from 'axios';
 
  class NewRecipe extends Component {
     constructor(props){
@@ -14,12 +15,19 @@ import './newRecipe.scss'
         this.changeHandler = (e) => {
             this.setState({[e.target.name]: e.target.value})
         }
+        this.onSubmit = (event) => {
+            event.preventDefault();
+            let recipe = this.state
+            axios.post("http://localhost:5000/api/recipes/add", recipe)
+            .then(this.props.history.push('/'))
+            .catch(err => console.log(err))
+        }
     }
     render() {
         console.log(this.state)
         return (
             <div className="new-recipe">
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <input onChange={this.changeHandler} name="title" placeholder="Title"/>
                     <input onChange={this.changeHandler} name="author" placeholder="Author"/>
                     <input onChange={this.changeHandler} name="imageLink" placeholder="Image Link"/>

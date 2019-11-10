@@ -2,12 +2,14 @@ import React from 'react';
 import Nav from '../nav/nav';
 import './recipeCard.scss'
 
-function RecipeCard() {
+function RecipeCard(props) {
+
     return(
     <div className="recipeCard">
-        <h3>Title: Mac And Cheese</h3>
-        <p>Author: Michael Trew</p>
-        <img src="https://cdn.pixabay.com/photo/2016/01/22/02/13/meat-1155132_1280.jpg"/>
+        <h3>Title: {props.data.title}</h3>
+        <p>Author: {props.data.author}</p>
+        <p>Category:{props.data.category}</p>
+        <img src={props.data.imageLink}/>
         <p>Rating: 5</p>
 
     </div>

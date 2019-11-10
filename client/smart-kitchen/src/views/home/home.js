@@ -8,18 +8,20 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			recipes:[]
+		};
 	}
 	componentDidMount(){
 		axios.get('http://localhost:5000/api/recipes/all')
-		.then(response => console.log(response))
+		.then(response =>this.setState({recipes:response.data}));
 	}
 	render() {
 		return (
 			<div className="home-container">
-				<RecipeCard />
-				<RecipeCard />
-				<RecipeCard />
+				{this.state.recipes.map((recipe) => {
+				return <RecipeCard key={recipe.id} data={recipe}/>
+				})}
 			</div>
 		);
 	}

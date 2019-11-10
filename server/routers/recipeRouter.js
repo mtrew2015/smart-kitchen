@@ -4,16 +4,18 @@ const db = require('../helpers/recipeHelpers.js')
 
 
 router.get('/all', (req,res) => {
-	db.getAllRecipes().then((recipes) => res.json({data: recipes}).catch(err => console.log(err)))
+	db.getAllRecipes()
+	.then((recipes) => res.send(recipes))
+	.catch(err => console.log(err));
 });
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
-	db.getRecipeById(id).then((post) => res.json({ data: post })).catch((err) => res.json({ message: err }));
+	db.getRecipeById(id).then((post) => res.json({post})).catch((err) => res.json({ message: err }));
 });
 
 router.get('/:author', (req, res) => {
 	const { author } = req.params;
-	db.getRecipesByUser(author).then((recipes) => res.json({ data: recipes })).catch((err) => res.json({ message: err }));
+	db.getRecipesByUser(author).then((recipes) => res.json({recipes})).catch((err) => console.log(err));
 });
 
 router.post('/add', (req, res) => {
