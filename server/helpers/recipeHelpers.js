@@ -1,4 +1,4 @@
-const db = require('../knexfile');
+const db = require('../dbConfig');
 
 module.exports = {
     getAllRecipes: () => {
