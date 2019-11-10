@@ -3,8 +3,8 @@ import './nav.scss';
 
 function Nav() {
 	return (
-        <div class="nav-container">
-		<nav class="nav">
+        <div className="nav-container">
+		<nav className="nav">
 			<a>Home</a>
 			<a>Recipes</a>
 			<a>Contact Us</a>

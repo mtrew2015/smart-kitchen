@@ -10,9 +10,13 @@ class Home extends Component {
 
 		this.state = {};
 	}
+	componentDidMount(){
+		axios.get('http://localhost:5000/api/recipes/all')
+		.then(response => console.log(response))
+	}
 	render() {
 		return (
-			<div class="home-container">
+			<div className="home-container">
 				<RecipeCard />
 				<RecipeCard />
 				<RecipeCard />

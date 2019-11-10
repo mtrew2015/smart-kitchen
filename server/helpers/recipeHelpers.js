@@ -1,6 +1,9 @@
 const db = require('../knexfile');
 
 module.exports = {
+    getAllRecipes: () => {
+        return db('recipes');
+    },
     getRecipesByUser: (author) => {
         return db('recipes').where('author', author)
     },

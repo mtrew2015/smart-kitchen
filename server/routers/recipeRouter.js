@@ -1,7 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../helpers/recipeHelpers');
+const db = require('../helpers/recipeHelpers.js')
 
+
+router.get('/all', (req,res) => {
+	db.getAllRecipes().then((recipes) => res.json({data: recipes}).catch(err => console.log(err)))
+});
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
 	db.getRecipeById(id).then((post) => res.json({ data: post })).catch((err) => res.json({ message: err }));
