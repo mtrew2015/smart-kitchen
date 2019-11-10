@@ -35,14 +35,16 @@ router.put('/update/:id', (req, res) => {
 		.catch((err) => res.send(err));
 });
 
-router.delete('delete/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
+	console.log(req.params)
 	const { id } = req.params;
+	console.log(id)
 	db
-		.deletePost(id)
+		.deleteRecipe(id)
 		.then((count) => {
 			res.json({ message: `${count} number of records deleted` });
 		})
-		.catch((err) => res.send('Could not delete this post'));
+		.catch((err) => res.send(err));
 });
 
 module.exports = router;

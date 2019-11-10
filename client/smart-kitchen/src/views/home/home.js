@@ -11,6 +11,9 @@ class Home extends Component {
 		this.state = {
 			recipes:[]
 		};
+		this.reload = () => {
+			this.forceUpdate()
+		}
 	}
 	componentDidMount(){
 		axios.get('http://localhost:5000/api/recipes/all')
@@ -20,7 +23,7 @@ class Home extends Component {
 		return (
 			<div className="home-container">
 				{this.state.recipes.map((recipe) => {
-				return <RecipeCard key={recipe.id} data={recipe}/>
+				return <RecipeCard refresh={this.refresh} key={recipe.id} data={recipe}/>
 				})}
 			</div>
 		);
