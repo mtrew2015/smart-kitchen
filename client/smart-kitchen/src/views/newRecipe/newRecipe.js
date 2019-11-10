@@ -20,6 +20,7 @@ import axios from 'axios';
             let recipe = this.state
             axios.post("http://localhost:5000/api/recipes/add", recipe)
             .then(this.props.history.push('/'))
+            .then(this.forceUpdate())
             .catch(err => console.log(err))
         }
     }

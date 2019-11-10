@@ -10,7 +10,7 @@ router.get('/all', (req,res) => {
 });
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
-	db.getRecipeById(id).then((post) => res.json({post})).catch((err) => res.json({ message: err }));
+	db.getRecipeById(id).then((post) => res.send(post)).catch((err) => res.json({ message: err }));
 });
 
 router.get('/:author', (req, res) => {
