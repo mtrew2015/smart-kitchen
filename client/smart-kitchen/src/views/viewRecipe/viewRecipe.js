@@ -15,6 +15,7 @@ class ViewRecipe extends Component {
             axios
             .delete(`http://localhost:5000/api/recipes/${this.props.match.params.id}`)
             .then(this.props.history.push('/'))
+            .then(window.location.reload())
             .catch(err => console.log(err))
         }
     }

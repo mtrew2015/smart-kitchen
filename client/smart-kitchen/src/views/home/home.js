@@ -19,11 +19,12 @@ class Home extends Component {
 		axios.get('http://localhost:5000/api/recipes/all')
 		.then(response =>this.setState({recipes:response.data}));
 	}
+	
 	render() {
 		return (
 			<div className="home-container">
 				{this.state.recipes.map((recipe) => {
-				return <RecipeCard refresh={this.refresh} key={recipe.id} data={recipe}/>
+				return <RecipeCard refresh={this.reload} key={recipe.id} data={recipe}/>
 				})}
 			</div>
 		);
