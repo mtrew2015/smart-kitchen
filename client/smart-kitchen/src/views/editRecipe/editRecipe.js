@@ -55,7 +55,7 @@ class EditRecipe extends Component {
 					<input onChange={this.changeHandler} name="imageLink" value={this.state.imageLink} />
 					<p>Category</p>
 					<input onChange={this.changeHandler} name="category" value={this.state.category} />
-					<p>Steps:</p>
+					<p>Steps</p>
 					<textarea onChange={this.changeHandler} name="steps" value={this.state.steps} />
 					<button>Submit</button>
 				</form>

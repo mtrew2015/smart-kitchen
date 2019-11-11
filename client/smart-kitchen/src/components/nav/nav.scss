@@ -1,26 +1,42 @@
 @import '../../assets/styles/variables';
 
-.nav{
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.8rem;
-    padding-top: 10px;
-    a{
-        color: white;
-        text-decoration: none;
-    }
+$tablet: "only screen and (max-width : 750px)";
+
+.nav {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.8rem;
+	padding-top: 10px;
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	@media #{$tablet} {
+		a {
+            margin: 2px;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+		}
+	}
 }
 
-h1{
-    font-size: 3.2rem;
-    text-align: center;
-    margin-top: 40px;
+h1 {
+	font-size: 3.2rem;
+	text-align: center;
+	margin-top: 40px;
 }
 
-.nav-container{
-    display: flex;
-    flex-direction: column;
-    background-color: $color4;
-    color: white;
-    height: 20vh;
+.nav-container {
+	@media #{$tablet} {
+        height: 100%;
+        flex-direction: column-reverse;
+        h1{
+            margin-top: 10px;
+        }
+	}
+	display: flex;
+	flex-direction: column;
+	background-color: $color4;
+	color: white;
+	height: 20vh;
 }
