@@ -13,7 +13,7 @@ function RecipeCard(props) {
 
     return(
     <div className="recipeCard" onClick={clickHandler}>
-        <h3>Title: {props.data.title}</h3>
+        <h3>{props.data.title}</h3>
         <p>Author: {props.data.author}</p>
         <p>Category:{props.data.category}</p>
         <img src={props.data.imageLink}/>

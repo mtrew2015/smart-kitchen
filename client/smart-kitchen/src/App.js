@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 import NewRecipe from './views/newRecipe/newRecipe';
 import RecipeCard from './components/recipeCard/recipeCard';
 import ViewRecipe from './views/viewRecipe/viewRecipe';
+import EditRecipe from './views/editRecipe/editRecipe';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Route exact path="/" component={Home} />
 			<Route exact path="/new" component={NewRecipe}/>
 			<Route exact path="/recipes/:id" component={ViewRecipe}/>
+			<Route exact path="/recipes/edit/:id" component={EditRecipe}/>
 		</div>
 	);
 }

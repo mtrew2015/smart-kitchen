@@ -33,7 +33,7 @@ import axios from 'axios';
                     <input onChange={this.changeHandler} name="author" placeholder="Author"/>
                     <input onChange={this.changeHandler} name="imageLink" placeholder="Image Link"/>
                     <input onChange={this.changeHandler} name="category" placeholder="Category"/>
-                    <textarea placeholder="Steps"/>
+                    <textarea onChange={this.changeHandler}name="steps" placeholder="Steps"/>
                     <button>Submit</button>
                 </form>
                 
