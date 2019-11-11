@@ -9,7 +9,7 @@ function Nav() {
 			<NavLink to="/">Home</NavLink>
 			<NavLink to="/">Recipes</NavLink>
 			<NavLink to="/">Contact Us</NavLink>
-			<NavLink to="/">Sign In</NavLink>
+			<NavLink to="/login">Sign In</NavLink>
 			<NavLink to="/new">Add New Recipe</NavLink>
 		</nav>
         <h1>Smart Kitchen Recipes</h1>
