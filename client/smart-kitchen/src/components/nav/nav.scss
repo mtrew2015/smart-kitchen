@@ -9,7 +9,10 @@ $tablet: "only screen and (max-width : 750px)";
 	padding-top: 10px;
 	a {
 		color: white;
-		text-decoration: none;
+        text-decoration: none;
+        &:hover{
+            color: $color5;
+        }
 	}
 	@media #{$tablet} {
         flex-direction: column;
@@ -18,6 +21,10 @@ $tablet: "only screen and (max-width : 750px)";
             margin: 2px;
             font-size: 1.6rem;
             margin-bottom: 5px;
+            border: 2px solid white;
+            padding: 7px;
+            width: 40%;
+            text-align: center;
 		}
 	}
 }
