@@ -8,7 +8,7 @@ function Nav() {
 		<nav className="nav">
 			<NavLink to="/">Home</NavLink>
 			<NavLink to="/">Recipes</NavLink>
-			<NavLink to="/">Contact Us</NavLink>
+			<NavLink to="/contact">Contact Us</NavLink>
 			<NavLink to="/login">Sign In</NavLink>
 			<NavLink to="/new">Add New Recipe</NavLink>
 		</nav>
