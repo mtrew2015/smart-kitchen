@@ -1,3 +1,5 @@
+@import '../../assets/styles/variables';
+
 $tablet: "only screen and (max-width : 750px)";
 
 .recipeCard{
@@ -18,10 +20,14 @@ $tablet: "only screen and (max-width : 750px)";
         font-size: 1.4rem;
         text-align: center;
         line-height: 1.5;
+        color: $color2;
+        font-weight: bold;
     }
     h3{
         font-size: 1.6rem;
         text-align: center;
         margin-bottom: 10px;
+        color:$color4;
+        font-weight: bold;
     }
 }
