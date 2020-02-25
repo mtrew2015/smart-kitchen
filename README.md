@@ -1,5 +1,7 @@
 # interview-michael-trew
 
+This was a code project that I did for an coding interview in 2019. The scope is relatively small for this project.
+
 # Front-End 
 For the front-end I used Reach JS, and local state for state management. I styled the entire app myself using node-sass. I made my API calls using axios.
 
